@@ -7,7 +7,7 @@ var app        = express(); 				// define our app using express
 var bodyParser = require('body-parser'); 	// get body-parser
 var morgan     = require('morgan'); 		// used to see requests
 var mongoose   = require('mongoose');
-var User       = require('./app/models/user');
+//var User       = require('./app/models/user');
 var port       = process.env.PORT || 8080; // set the port for our app
 
 // APP CONFIGURATION ---------------------
@@ -30,7 +30,7 @@ app.use(morgan('dev'));
 // =============================
 
 // basic route for the home page
-app.get('/',function(){
+app.get('/',function(req,res){
 	res.send('homepage');
 });
 
