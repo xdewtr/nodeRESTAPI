@@ -7,8 +7,13 @@ var app        = express(); 				// define our app using express
 var bodyParser = require('body-parser'); 	// get body-parser
 var morgan     = require('morgan'); 		// used to see requests
 var mongoose   = require('mongoose');
-//var User       = require('./app/models/user');
+var User       = require('./app/models/user');
 var port       = process.env.PORT || 8080; // set the port for our app
+
+// connect to mongo via mongoose
+//mongoose.connect('mongodb://admin:pass@apollo.modulusmongo.net:27017/evaX9yxo', function(err){
+//	if(err) throw err;
+//});
 
 // APP CONFIGURATION ---------------------
 // use body parser so we can grab information from POST requests
